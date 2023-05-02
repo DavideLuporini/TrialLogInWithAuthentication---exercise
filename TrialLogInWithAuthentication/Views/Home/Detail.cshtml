@@ -1,0 +1,20 @@
+﻿@model Telephone
+@using (Html.BeginForm())
+{
+
+    <div>
+        @Html.LabelFor(model=>model.Vendor)
+        <div>
+            @Html.DisplayFor(model => model.Vendor)
+        </div>
+    </div>
+    <div>
+        @Html.LabelFor(model=>model.Model)
+        <div>
+            @Html.EditorFor(model => model.Model)
+        </div>
+    </div>
+
+    // <input type="submit" value="Save" />
+    <input type="submit" value="Prendi" formaction="@Url.Action("BuyTelephone")" formmethod="post" />
+}

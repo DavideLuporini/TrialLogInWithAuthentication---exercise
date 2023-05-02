@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Telephone>
+
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vendor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+            <td>
+                @Html.ActionLink("Detail", "Detail", new {id = item.Model})
+            </td>
+        </tr>
+    }
+
+</table>
